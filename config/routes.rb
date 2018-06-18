@@ -1,4 +1,12 @@
 DemoApp::Application.routes.draw do
+  resources :microposts
+
+
+  root :to => "users#index" 
+  resources :users
+  # match '/html_tag', to: "users#html_tag"
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
