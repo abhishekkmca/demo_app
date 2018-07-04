@@ -1,7 +1,7 @@
 DemoApp::Application.routes.draw do
   resources :microposts
 
-
+  match '/posts',  to: "microposts#index"
   root :to => "users#index" 
   resources :users
   # match '/html_tag', to: "users#html_tag"
@@ -14,7 +14,7 @@ DemoApp::Application.routes.draw do
   #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action
 
-  # Sample of named route:
+  # Sample of namespaced route:
   #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
   # This route can be invoked with purchase_url(:id => product.id)
 
